@@ -70,7 +70,7 @@ def set_course
   @note = Note.find(params[:id])
 end
 
-def note_params
+def course_params
   params.require(:note).permit!
 end
 
