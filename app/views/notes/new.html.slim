@@ -1,0 +1,15 @@
+|  Nueva Nota
+
+- if flash[:notice]
+  div.notice
+		= flash[:notice] 
+
+.row
+		= simple_form_for(@note) do |f| 
+			.col.s12
+					.card.horizontal.grey.lighten-2
+						.card-stacked
+							.card-content.blue-grey.lighten-5
+								= render 'fields', f: f
+							.card-action
+								= submit_tag 'Crear Nota', class: 'btn btn-primary'

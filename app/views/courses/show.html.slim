@@ -1,0 +1,10 @@
+.container id="main-container"
+	.card-panel.cyan.lighten-4
+		h5 id="title-panel-text"
+			i.material-icons id="title-panel-icon" 
+			| #{@course.name}  
+		
+    .card-action
+						= link_to 'Editar', edit_course_path(@course), class: 'btn btn-default' 
+						br
+						= link_to "Ir a Home", root_path

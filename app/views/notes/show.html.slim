@@ -1,0 +1,16 @@
+table 
+  tr
+    th Estudiante
+    th Curso
+    th Materia
+    th Valor
+  tr
+    td = Student.find(@note.student_id).name
+    td = Course.find(@note.course_id).name
+    td = Subject.find(@note.subject_id).name
+    td = @note.value
+
+.card-action
+						= link_to 'Editar', edit_note_path(@note), class: 'btn btn-default' 
+						br
+						= link_to "Ir a Home", root_path

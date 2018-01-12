@@ -1,0 +1,11 @@
+|Editar nota #{@note.name}
+.row
+		= simple_form_for(@note) do |n|
+			.row
+				.col.s12
+						.card.horizontal.grey.lighten-2
+							.card-stacked
+								.card-content.blue-grey.lighten-5
+									= render 'fields', f: n
+								.card-action
+									= submit_tag 'Actualizar', class: 'btn btn-primary'

@@ -1,0 +1,26 @@
+.table-light
+  .table-header
+    .table-caption
+      | Lista Notas
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th Estudiante
+        th Curso
+        th Materia
+        th Valor
+    tbody
+      - @notes.each do |n|
+        tr
+          td
+            = Student.find(n.student_id).name if n.student_id
+          td
+            = Course.find(n.course_id).name if n.course_id
+          td
+            = Subject.find(n.subject_id).name if n.subject_id
+          td
+            strong = n.value
+  .table-footer
+		= link_to 'New note', new_note_path, class: 'btn btn-primary'
+		br
+		= link_to "Ir a Home", root_path

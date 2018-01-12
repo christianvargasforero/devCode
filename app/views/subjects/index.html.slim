@@ -1,0 +1,20 @@
+.table-light
+  .table-header
+    .table-caption
+      | Lista Materias
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th Nombre
+
+    tbody
+      - @subjects.each do |s|
+      	tr
+          td
+            strong = link_to s.name, subjects_path(s)
+
+
+  .table-footer
+		= link_to 'New subjects', new_subject_path, class: 'btn btn-primary'
+		br
+		= link_to "Ir a Home", root_path

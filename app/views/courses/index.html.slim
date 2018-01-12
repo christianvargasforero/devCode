@@ -1,0 +1,20 @@
+.table-light
+  .table-header
+    .table-caption
+      | Lista Cursos
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th Nombre
+
+    tbody
+      - @course.each do |c|
+      	tr
+          td
+            strong = link_to c.name, course_path(c)
+
+
+  .table-footer
+		= link_to 'New course', new_course_path, class: 'btn btn-primary'
+		br
+		= link_to "Ir a Home", root_path

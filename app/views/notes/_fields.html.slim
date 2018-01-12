@@ -1,0 +1,6 @@
+.card.col.s12
+	.col.s4
+		= f.input :student, :collection => Student.all
+		= f.input :course, :collection => Course.all
+		= f.input :subject, :collection => Subject.all
+		= f.input :value, :label => 'Valor'
